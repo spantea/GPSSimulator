@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  */
 public class GPSProducer {
     private static final Logger LOGGER =  Logger.getLogger(GPSProducer.class);
-    private final static String TOPIC = "gps-topic";
+    private final static String TOPIC = "gps-topic-replicated";
     private final static String BOOTSTRAP_SERVERS = "localhost:9092,localhost:9093";
 
     private KafkaProducer<Long, GPSData> producer;

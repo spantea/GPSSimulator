@@ -91,9 +91,11 @@ public class Simulation {
         System.out.println("Enter route range(km): ");
         double routeRange = sc.nextDouble();
 
-        Simulation simulation = new Simulation(nbOfCars, speedRange, routeRange);
-        simulation.start();
-        simulation.waitForCompletion();
-
+        while (true) {
+            Simulation simulation = new Simulation(nbOfCars, speedRange, routeRange);
+            simulation.start();
+            simulation.waitForCompletion();
+            simulation.shutdown();
+        }
     }
 }
